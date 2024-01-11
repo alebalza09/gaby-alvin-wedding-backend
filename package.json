@@ -1,0 +1,50 @@
+{
+  "name": "gaby-alvin-wedding-backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "start:dev": "npm run build:dev && npm run start",
+    "start": "node dist/server.js",
+    "build": "rollup -c rollup.config.js",
+    "build:dev": "rollup -c rollup.dev.config.js",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alebalza09/gaby-alvin-wedding-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alebalza09/gaby-alvin-wedding-backend/issues"
+  },
+  "homepage": "https://github.com/alebalza09/gaby-alvin-wedding-backend#readme",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1",
+    "rollup": "^4.9.4",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "ts-node": "^10.9.2"
+  }
+}
