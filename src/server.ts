@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import * as path from 'path';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
+import cors from 'cors';
 
 const app: Application = express();
 dotenv.config({ path: path.join(process.cwd(), 'dist', '.env') });
@@ -12,6 +13,7 @@ const env = {
 }
 
 app.use(bodyParser.json());
+app.use(cors())
 
 // PostgreSQL connection pool
 const pool = new Pool({
