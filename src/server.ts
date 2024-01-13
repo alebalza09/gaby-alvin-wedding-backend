@@ -49,6 +49,14 @@ app.post('/api/rsvp', async (req, res) => {
   }
 });
 
+app.get('/api/v1', async (req, res) => {
+  try {
+      res.json({ version: "v1.0.0"});
+  } catch (error) {
+      res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 if (env.port) {
   app.listen(env.port, () => {
     console.log(`Server is running on port ${env.port}`);
